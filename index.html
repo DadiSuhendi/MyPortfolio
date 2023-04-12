@@ -36,10 +36,10 @@
 </head>
 <body>
 	<div class="bg-[url('assets/img/tim-schmidbauer-TE_lOmkKq04-unsplash.jpg')] bg-no-repeat bg-cover w-screen h-screen ">
-	<nav id="navbar" class="px-8 py-4 lg:py-10 lg:px-40 flex justify-between items-center w-screen backdrop-blur-sm">
-		<a id="name" class="text-lg text-white font-bold " href="#">Dadi Suhendi</a>
+	<nav id="navbar" class="px-8 py-4 lg:py-5 lg:px-40 flex justify-between items-center w-screen backdrop-blur-xl fixed z-50">
+		<a id="name" class="text-lg text-blue-400 dark:text-white font-bold " href="#">Dadi Suhendi</a>
 		<div class="lg:hidden flex">
-			<button class="navbar-burger flex items-center text-blue-600 p-3">
+			<button class="navbar-burger flex items-center text-blue-400 p-3">
 				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
 				</svg>
@@ -71,16 +71,16 @@
 			<li><a class="text-md text-blue-400 font-bold  hover:text-gray-500" href="#home">Home</a></li>
 			<li class="text-gray-300">
 			</li>
-			<li><a class="text-md text-white" href="#">About</a></li>
+			<li><a class="text-md text-gray-400" href="#">About</a></li>
 			<li class="text-gray-300">
 			</li>
-			<li><a class="text-md text-white hover:text-gray-500" href="#projects">Projects</a></li>
+			<li><a class="text-md text-gray-400 hover:text-gray-500" href="#projects">Projects</a></li>
 			<li class="text-gray-300">
 			</li>
-			<li><a class="text-md text-white hover:text-gray-500" href="#galleries">Galleries</a></li>
+			<li><a class="text-md text-gray-400 hover:text-gray-500" href="#galleries">Galleries</a></li>
 			<li class="text-gray-300">
 			</li>
-			<li><a class="text-md text-white hover:text-gray-500" href="#contact">Contact</a></li>
+			<li><a class="text-md text-gray-400 hover:text-gray-500" href="#contact">Contact</a></li>
 			<li>
 				<button
 				id="theme-toggle"
@@ -117,9 +117,9 @@
 	</nav>
 	<div class="navbar-menu relative z-50 hidden">
 		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white dark:bg-gray-900 border-r overflow-y-auto backdrop-blur-sm">
 			<div class="flex items-center mb-8">
-				<a class="mr-auto text-lg font-bold leading-none" href="#">Dadi Suhendi</a>
+				<a class="mr-auto text-lg font-bold leading-none dark:text-white" href="#">Dadi Suhendi</a>
 				<button class="navbar-close">
 					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -147,7 +147,7 @@
 			</div>
 		</nav>
 	</div>
-	<div id="hero" class="flex flex-col h-4/5 items-center justify-center">
+	<div id="hero" class="flex flex-col items-center justify-center h-screen">
 		<span class="lg:text-5xl text-3xl text-white text-center">HELLO, I'M <span class="text-sky-400 font-bold">PROGRAMMER!</span></span>
 		<p class="lg:text-2xl text-xl text-white mt-3 text-center">Don't forget the semicolon;</p>
 		<a href="#about" class="lg:text-[18px] text-sm text-white px-6 py-2 bg-sky-500 rounded-full mt-5 outline outline-sky-300 hover:bg-sky-400">Get Started!</a>
@@ -158,7 +158,7 @@
 	</a>
 	<main class="w-screen px-10 py-4 lg:py-10 lg:px-40 lg:flex lg:justify-between pt-10 dark:bg-gray-900" id="about">
 		<div class="leftSection lg:w-1/2">
-			<h1 class="text-4xl text-center pb-5 font-bold"><span class="text-sky-500">About</span><span class="text-white"> Me</span></h1>
+			<h1 class="text-4xl text-center pb-5 font-bold"><span class="text-sky-500">About</span><span class="dark:text-white"> Me</span></h1>
 			<p class="text-justify dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eveniet in mollitia tempora, inventore culpa necessitatibus ad quasi minus vitae quas aut accusamus illum! Laboriosam ratione, voluptatum itaque porro fuga ducimus aut voluptas saepe suscipit, eos praesentium dolorem culpa iusto temporibus ut sit tenetur accusantium adipisci impedit placeat corporis in!</p>
 			<p class="text-justify dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, esse?</p>
 			<div class="imgSection flex gap-4 justify-center pt-5 items-center">
