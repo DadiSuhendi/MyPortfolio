@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"  rel="stylesheet" />
+  <style>
+	html {
+		overflow-x: hidden;
+		scroll-behavior: smooth;
+	}
+  </style>
+  <script>
+	// It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
+	if (
+	  localStorage.getItem('color-theme') === 'dark' ||
+	  (!('color-theme' in localStorage) &&
+		window.matchMedia('(prefers-color-scheme: dark)').matches)
+	) {
+	  document.documentElement.classList.add('dark');
+	} else {
+	  document.documentElement.classList.remove('dark');
+	}
+  </script>
+</head>
+<body>
+	<div class="bg-[url('assets/img/tim-schmidbauer-TE_lOmkKq04-unsplash.jpg')] bg-no-repeat bg-cover w-screen h-screen ">
+	<nav id="navbar" class="px-8 py-4 lg:py-10 lg:px-40 flex justify-between items-center w-screen backdrop-blur-sm">
+		<a id="name" class="text-lg text-white font-bold " href="#">Dadi Suhendi</a>
+		<div class="lg:hidden flex">
+			<button class="navbar-burger flex items-center text-blue-600 p-3">
+				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+			<button
+				id="theme-toggle"
+				type="button"
+				class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-sm p-2.5"
+				>
+				<svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+				</svg>
+				<svg
+					id="theme-toggle-light-icon"
+					class="w-5 h-5 hidden"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+					d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+					fill-rule="evenodd"
+					clip-rule="evenodd"
+					></path>
+				</svg>
+			</button>
+		</div>
+		<ul class="hidden lg:flex lg:items-center lg:space-x-6">
+			<li><a class="text-md text-blue-400 font-bold  hover:text-gray-500" href="#home">Home</a></li>
+			<li class="text-gray-300">
+			</li>
+			<li><a class="text-md text-white" href="#">About</a></li>
+			<li class="text-gray-300">
+			</li>
+			<li><a class="text-md text-white hover:text-gray-500" href="#projects">Projects</a></li>
+			<li class="text-gray-300">
+			</li>
+			<li><a class="text-md text-white hover:text-gray-500" href="#galleries">Galleries</a></li>
+			<li class="text-gray-300">
+			</li>
+			<li><a class="text-md text-white hover:text-gray-500" href="#contact">Contact</a></li>
+			<li>
+				<button
+				id="theme-toggle"
+				type="button"
+				class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-sm p-2.5"
+				>
+					<svg
+						id="theme-toggle-dark-icon"
+						class="w-5 h-5 hidden"
+						fill="currentColor"
+						viewBox="0 0 20 20"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+						d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+						></path>
+					</svg>
+					<svg
+						id="theme-toggle-light-icon"
+						class="w-5 h-5 hidden"
+						fill="currentColor"
+						viewBox="0 0 20 20"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+						d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						></path>
+					</svg>
+				</button>
+			</li>
+		</ul>
+	</nav>
+	<div class="navbar-menu relative z-50 hidden">
+		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+			<div class="flex items-center mb-8">
+				<a class="mr-auto text-lg font-bold leading-none" href="#">Dadi Suhendi</a>
+				<button class="navbar-close">
+					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
+			<div>
+				<ul>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#home">Home</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#about">About</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#projects">Projects</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#galleries">Galleries</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div id="hero" class="flex flex-col h-4/5 items-center justify-center">
+		<span class="lg:text-5xl text-3xl text-white">HELLO, I'M <span class="text-sky-400 font-bold">PROGRAMMER!</span></span>
+		<p class="lg:text-2xl text-xl text-white mt-3">Don't forget the semicolon;</p>
+		<a href="#about" class="lg:text-[18px] text-sm text-white px-6 py-2 bg-sky-500 rounded-full mt-5 outline outline-sky-300 hover:bg-sky-400">Get Started!</a>
+	</div>
+	</div>
+	<a href="#home" onclick="topFunction()" id="bounce" class=" h-10 w-10 bg-sky-500 rounded-full fixed bottom-10 right-10 animate-bounce flex justify-center items-center">
+		<i class="fa fa-arrow-up text-2xl font-bold text-white dark:text-gray-900"></i>
+	</a>
+	<main class="h-screen w-screen px-20 py-4 lg:py-10 lg:px-40 lg:flex justify-between pt-10" id="about">
+		<div class="leftSection lg:w-1/2">
+			<h1 class="text-4xl text-center pb-5 font-bold"><span class="text-sky-500">About</span><span> Me</span></h1>
+			<p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eveniet in mollitia tempora, inventore culpa necessitatibus ad quasi minus vitae quas aut accusamus illum! Laboriosam ratione, voluptatum itaque porro fuga ducimus aut voluptas saepe suscipit, eos praesentium dolorem culpa iusto temporibus ut sit tenetur accusantium adipisci impedit placeat corporis in!</p>
+			<p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, esse?</p>
+			<div class="imgSection flex gap-4 justify-center pt-5 items-center">
+				<a href="" class="">
+					<i class="fa-brands fa-instagram text-4xl"></i>
+				</a>
+				<a href="">
+					<i class="fa-brands fa-square-github text-4xl"></i>
+				</a>
+				<a href="">
+					<i class="fa-brands fa-linkedin text-4xl"></i>
+				</a>
+			</div>
+		</div>
+		<div class="rightSection lg:w-1/2 pt-5 flex lg:justify-end justify-center">
+			<img src="assets/img/dadi.png" alt="" class="lg:w-1/2 lg:h-1/2 w-3/4 h-3/4 rounded-lg shadow-md">
+		</div>
+	</main>
+	<main class="w-screen px-20 py-4 lg:py-10 lg:px-40 pt-20 dark:bg-gray-900">
+		<h1 class="text-4xl text-center pb-10 font-bold"><span class="dark:text-white">My</span><span class="text-sky-500" > Projects</span></h1>
+		<div class="flex flex-col gap-4 items-center lg:flex-row lg:justify-between lg:flex-wrap">
+			<div class="w-80 h-80 shadow-lg border-b-4 border-sky-500 rounded-t-xl overflow-hidden dark:bg-gray-700 dark:shadow-xl">
+				<span class="cursor-pointer" data-modal-target="defaultModal" data-modal-toggle="defaultModal">
+					<div class="topSection h-40 overflow-hidden">
+						<img src="assets/img/aaa.PNG" alt="" class="bg-contain h-full w-full hover:scale-125 transition-all duration-500">
+					</div>
+				</span>
+				<div class="bottomSection h-40 px-5 py-5">
+					<span class="text-md lg:text-lg font-bold cursor-pointer hover:opacity-80 dark:text-white" data-modal-target="defaultModal" data-modal-toggle="defaultModal">First Project</span>
+					<span class="block text-sm lg:text-sm dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla asperiores exercitationem officiis laboriosam tenetur voluptatem, est molestias ratione vero nihil!</span>
+				</div>
+			</div>
+			<div class="w-80 h-80 shadow-lg border-b-4 border-sky-500 rounded-t-xl overflow-hidden dark:bg-gray-700 dark:shadow-xl">
+				<span class="cursor-pointer" data-modal-target="defaultModal" data-modal-toggle="defaultModal">
+					<div class="topSection h-40 overflow-hidden">
+						<img src="assets/img/a.jpg" alt="" class="bg-contain h-full w-full hover:scale-125 transition-all duration-500">
+					</div>
+				</span>
+				<div class="bottomSection h-40 px-5 py-5">
+					<span class="text-md lg:text-lg font-bold cursor-pointer hover:opacity-80 dark:text-white" data-modal-target="defaultModal" data-modal-toggle="defaultModal">Second Project</span>
+					<span class="block text-sm lg:text-sm dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla asperiores exercitationem officiis laboriosam tenetur voluptatem, est molestias ratione vero nihil!</span>
+				</div>
+			</div>
+			<div class="w-80 h-80 shadow-lg border-b-4 border-sky-500 rounded-t-xl overflow-hidden dark:bg-gray-700 dark:shadow-xl">
+				<span class="cursor-pointer" data-modal-target="defaultModal" data-modal-toggle="defaultModal">
+					<div class="topSection h-40 overflow-hidden">
+						<img src="assets/img/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg" alt="" class="bg-contain h-full w-full hover:scale-125 transition-all duration-500">
+					</div>
+				</span>
+				<div class="bottomSection h-40 px-5 py-5">
+					<span class="text-md lg:text-lg font-bold cursor-pointer hover:opacity-80 dark:text-white" data-modal-target="defaultModal" data-modal-toggle="defaultModal">Third Project</span>
+					<span class="block text-sm lg:text-sm dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla asperiores exercitationem officiis laboriosam tenetur voluptatem, est molestias ratione vero nihil!</span>
+				</div>
+			</div>
+			<div class="w-80 h-80 shadow-lg border-b-4 border-sky-500 rounded-t-xl overflow-hidden dark:bg-gray-700 dark:shadow-xl">
+				<span class="cursor-pointer" data-modal-target="defaultModal" data-modal-toggle="defaultModal">
+					<div class="topSection h-40 overflow-hidden">
+						<img src="assets/img/aaa.PNG" alt="" class="bg-contain h-full w-full hover:scale-125 transition-all duration-500">
+					</div>
+				</span>
+				<div class="bottomSection h-40 px-5 py-5">
+					<span class="text-md lg:text-lg font-bold cursor-pointer hover:opacity-80 dark:text-white" data-modal-target="defaultModal" data-modal-toggle="defaultModal">Fourth Project</span>
+					<span class="block text-sm lg:text-sm dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla asperiores exercitationem officiis laboriosam tenetur voluptatem, est molestias ratione vero nihil!</span>
+				</div>
+			</div>
+			<div class="w-80 h-80 shadow-lg border-b-4 border-sky-500 rounded-t-xl overflow-hidden dark:bg-gray-700 dark:shadow-xl">
+				<span class="cursor-pointer" data-modal-target="defaultModal" data-modal-toggle="defaultModal">
+					<div class="topSection h-40 overflow-hidden">
+						<img src="assets/img/a.jpg" alt="" class="bg-contain h-full w-full hover:scale-125 transition-all duration-500">
+					</div>
+				</span>
+				<div class="bottomSection h-40 px-5 py-5">
+					<span class="text-md lg:text-lg font-bold cursor-pointer hover:opacity-80 dark:text-white" data-modal-target="defaultModal" data-modal-toggle="defaultModal">Fifth Project</span>
+					<span class="block text-sm lg:text-sm dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla asperiores exercitationem officiis laboriosam tenetur voluptatem, est molestias ratione vero nihil!</span>
+				</div>
+			</div>
+			<div class="w-80 h-80 shadow-lg border-b-4 border-sky-500 rounded-t-xl overflow-hidden dark:bg-gray-700 dark:shadow-xl">
+				<span class="cursor-pointer" data-modal-target="defaultModal" data-modal-toggle="defaultModal">
+					<div class="topSection h-40 overflow-hidden">
+						<img src="assets/img/fotis-fotopoulos-6sAl6aQ4OWI-unsplash.jpg" alt="" class="bg-contain h-full w-full hover:scale-125 transition-all duration-500">
+					</div>
+				</span>
+				<div class="bottomSection h-40 px-5 py-5">
+					<span class="text-md lg:text-lg font-bold cursor-pointer hover:opacity-80 dark:text-white" data-modal-target="defaultModal" data-modal-toggle="defaultModal">Sixth Project</span>
+					<span class="block text-sm lg:text-sm dark:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla asperiores exercitationem officiis laboriosam tenetur voluptatem, est molestias ratione vero nihil!</span>
+				</div>
+			</div>
+		</div>
+	</main>
+  
+  <!-- Main modal -->
+  <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+	  <div class="relative w-full max-w-2xl max-h-full">
+		  <!-- Modal content -->
+		  <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+			  <!-- Modal header -->
+			  <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+				  <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+					  First Project
+				  </h3>
+				  <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
+					  <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+					  <span class="sr-only">Close modal</span>
+				  </button>
+			  </div>
+			  <!-- Modal body -->
+			  <div class="p-6 space-y-6">
+				<img src="assets/img/aaa.PNG" alt="">
+				  <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+					  With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+					</p>
+				  <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+					  The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+				  </p>
+			  </div>
+			  <!-- Modal footer -->
+			  <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+				  <button data-modal-hide="defaultModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Keluar</button>
+			  </div>
+		  </div>
+	  </div>
+  </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+<script>
+	var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+// Change the icons inside the button based on previous settings
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    themeToggleLightIcon.classList.remove('hidden');
+} else {
+    themeToggleDarkIcon.classList.remove('hidden');
+}
+
+var themeToggleBtn = document.getElementById('theme-toggle');
+
+themeToggleBtn.addEventListener('click', function() {
+
+    // toggle icons inside button
+    themeToggleDarkIcon.classList.toggle('hidden');
+    themeToggleLightIcon.classList.toggle('hidden');
+
+    // if set via local storage previously
+    if (localStorage.getItem('color-theme')) {
+        if (localStorage.getItem('color-theme') === 'light') {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        }
+
+    // if NOT set via local storage previously
+    } else {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        }
+    }
+    
+});
+</script>
+<script>
+
+// Munculkan tombol scroll up saat jarak scroll lebih dari 20px
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("bounce").classList.remove("hidden");
+} else {
+	document.getElementById("bounce").classList.add("hidden");
+  }
+}
+
+// Animasi bounce saat tombol scroll up diklik
+function topFunction() {
+  var position = document.documentElement.scrollTop || document.body.scrollTop;
+  if (position > 0) {
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+}
+
+// Burger menus
+document.addEventListener('DOMContentLoaded', function() {
+    // open
+    const burger = document.querySelectorAll('.navbar-burger');
+    const menu = document.querySelectorAll('.navbar-menu');
+
+    if (burger.length && menu.length) {
+        for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    // close
+    const close = document.querySelectorAll('.navbar-close');
+    const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+    if (close.length) {
+        for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+
+    if (backdrop.length) {
+        for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener('click', function() {
+                for (var j = 0; j < menu.length; j++) {
+                    menu[j].classList.toggle('hidden');
+                }
+            });
+        }
+    }
+});
+</script>
